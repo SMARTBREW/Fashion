@@ -1,36 +1,66 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# JJ Valaya — Fashion Website Replica
 
-## Getting Started
+A clean Next.js replica of the [JJ Valaya](https://valaya.com) luxury fashion website, built with the App Router, TypeScript, and Tailwind CSS.
 
-First, run the development server:
+## Quick Start
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) for the homepage and [http://localhost:3000/jjv](http://localhost:3000/jjv) for the JJV collection page.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Pages
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+| Route | Description |
+|-------|-------------|
+| `/` | Homepage with white navbar, hero carousel, footer |
+| `/jjv` | JJV collection page with maroon header, collection grids, brand section, footer |
 
-## Learn More
+## Project Structure
 
-To learn more about Next.js, take a look at the following resources:
+```
+src/
+├── app/
+│   ├── layout.tsx          # Root layout + fonts
+│   ├── page.tsx            # Homepage
+│   └── jjv/page.tsx        # JJV page
+├── components/
+│   ├── home/               # Homepage sections
+│   ├── jjv/                # JJV page sections
+│   ├── layout/             # Navbar, Footer, dividers
+│   └── ui/                 # Reusable UI (buttons, cards, images)
+└── lib/
+    ├── data.ts             # All content + image paths
+    └── types.ts            # TypeScript interfaces
+public/
+└── images/                 # Drop your images here (see README inside)
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Adding Your Images
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+1. Add images to `public/images/` following the naming guide in [`public/images/README.md`](public/images/README.md)
+2. Refresh the browser — placeholders will be replaced automatically
 
-## Deploy on Vercel
+## Tech Stack
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- **Next.js 16** (App Router)
+- **React 19**
+- **TypeScript**
+- **Tailwind CSS 4**
+- **Lucide React** (icons)
+- **Google Fonts** — Cormorant Garamond (serif), Jost (sans), Great Vibes (script)
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Scripts
+
+| Command | Description |
+|---------|-------------|
+| `npm run dev` | Start development server |
+| `npm run build` | Production build |
+| `npm run start` | Start production server |
+| `npm run lint` | Run ESLint |
+
+## Next Steps
+
+Once you share your images, we'll drop them into `public/images/` and fine-tune spacing, typography, and any custom differences you want from the original site.

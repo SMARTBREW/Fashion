@@ -1,7 +1,12 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  /* config options here */
+  images: {
+    qualities: [75, 90],
+  },
+  async redirects() {
+    return [{ source: "/jjv", destination: "/", permanent: true }];
+  },
 };
 
 export default nextConfig;
