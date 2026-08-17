@@ -11,7 +11,7 @@ export const heroSlides: HeroSlide[] = [
     taglineScript: "Maharaja's",
     description: "CHARMS & PERSONAL ACCESSORIES",
     cta: "SHOP NOW",
-    href: "#collections",
+    href: "/collection",
   },
   {
     id: "jjv-hall-of-fame",
@@ -23,7 +23,7 @@ export const heroSlides: HeroSlide[] = [
     taglineScript: "Maharaja's",
     description: "THE HALL OF FAME",
     cta: "SHOP NOW",
-    href: "#collections",
+    href: "/collection",
   },
   {
     id: "jjv-brand",
@@ -35,7 +35,7 @@ export const heroSlides: HeroSlide[] = [
     taglineScript: "Maharaja's",
     description: "BRIDGE TO LUXURY",
     cta: "SHOP NOW",
-    href: "#collections",
+    href: "/collection",
   },
 ];
 
@@ -132,7 +132,7 @@ export const shopCategories: CategoryItem[] = [
   {
     id: "new-arrival",
     label: "NEW ARRIVAL",
-    href: "#collections",
+    href: "/collection",
     image: "/images/hall_of_fame.webp",
     imageAlt: "New Arrival",
   },
@@ -153,7 +153,7 @@ export const shopCategories: CategoryItem[] = [
   {
     id: "jjv",
     label: "JJV",
-    href: "#collections",
+    href: "/collection",
     image: "/images/IMG_3816.webp",
     imageAlt: "JJV",
   },
@@ -294,6 +294,6 @@ export const mainNavLinks = [
 
 export const jjvNavLinks = [
   { label: "JJ VALAYA", href: "/" },
-  { label: "JJV", href: "/jjv" },
+  { label: "JJV", href: "/collection" },
   { label: "DISCOVER", href: "#" },
 ];
