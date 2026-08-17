@@ -75,10 +75,10 @@ export function CollectionPageContent() {
 
   const gridClass =
     view === "grid-4"
-      ? "grid grid-cols-2 gap-4 md:grid-cols-3 xl:grid-cols-4"
+      ? "grid grid-cols-2 gap-x-5 gap-y-12 md:grid-cols-3 xl:grid-cols-4"
       : view === "list"
-        ? "grid grid-cols-1 gap-4"
-        : "grid grid-cols-1 gap-5 sm:grid-cols-2 xl:grid-cols-3";
+        ? "grid grid-cols-1 gap-y-10"
+        : "grid grid-cols-1 gap-x-8 gap-y-14 sm:grid-cols-2 xl:grid-cols-3";
 
   return (
     <div className="bg-cream">
@@ -143,11 +143,7 @@ export function CollectionPageContent() {
           {filteredProducts.length > 0 ? (
             <div className={gridClass}>
               {filteredProducts.map((product) => (
-                <CollectionProductCard
-                  key={product.id}
-                  product={product}
-                  compact={view === "grid-4"}
-                />
+                <CollectionProductCard key={product.id} product={product} />
               ))}
             </div>
           ) : (
